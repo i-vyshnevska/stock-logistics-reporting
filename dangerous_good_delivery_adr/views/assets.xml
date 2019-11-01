@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <template id="assets_common" name="adr_report" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+      <link rel="stylesheet" href="/dangerous_good_delivery_adr/static/src/scss/adr_report.scss" type="text/scss"/>
+    </xpath>
+  </template>
+</odoo>
