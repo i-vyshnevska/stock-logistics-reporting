@@ -5,11 +5,11 @@
         id="action_report_dangerous_delivery"
         model="stock.picking"
         report_type="qweb-pdf"
-        name="dangerous_good_delivery_adr.report_delivery_dangerous"
-        file="dangerous_good_delivery_adr.report_delivery_dangerous"
+        name="l10n_eu_product_adr_delivery_report.report_delivery_dangerous"
+        file="l10n_eu_product_adr_delivery_report.report_delivery_dangerous"
     />
 
-    <template id="report_delivery_dangerous_document_next_page_header">                
+    <template id="report_delivery_adr_next_page">                
         <table class="table table-condensed adr-report adr-text" >
             <tbody>
                 <tr>
@@ -50,7 +50,7 @@
         </table>
     </template>
 
-    <template id="report_delivery_dangerous_document_details">
+    <template id="report_delivery_adr_details">
         <table class="table table-condensed adr-report" >
             <tbody>
                 <tr>
@@ -73,7 +73,7 @@
         </table>
     </template>
 
-    <template id="report_delivery_dangerous_document">
+    <template id="report_delivery_adr_document">
         <t t-call="web.html_container">
             <t t-call="web.basic_layout">
                 <div class="page adr-report">
@@ -125,7 +125,7 @@
                             </tr>
                         </tbody>
                         </table>
-                        <t t-call="dangerous_good_delivery_adr.report_delivery_dangerous_document_details"/>                            
+                        <t t-call="l10n_eu_product_adr_delivery_report.report_delivery_adr_details"/>                            
                         <table class="table table-condensed adr-report" >
                             <tbody>
                                 <tr>
@@ -191,7 +191,7 @@
                             national and international government regulations. For the purposes of the IMDG Code see 5.4.1.1
                             +For the purpose of the IMDG Code, see 5.4.2
                         <t t-if="next_page_lines">
-                            <t t-call="dangerous_good_delivery_adr.report_delivery_dangerous_document_next_page_header"/>            
+                            <t t-call="l10n_eu_product_adr_delivery_report.report_delivery_adr_next_page"/>            
                         </t>
                     </div>
                 </t>
@@ -201,7 +201,7 @@
 
     <template id="report_delivery_dangerous">
         <t t-foreach="docs" t-as="o">
-            <t t-call="dangerous_good_delivery_adr.report_delivery_dangerous_document" t-lang="o.partner_id.lang"/>
+            <t t-call="l10n_eu_product_adr_delivery_report.report_delivery_adr_document" t-lang="o.partner_id.lang"/>
         </t>
     </template>
 

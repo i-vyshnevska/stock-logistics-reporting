@@ -5,7 +5,7 @@ from odoo import api, models
 
 
 class DangerousDeliveryADR(models.AbstractModel):
-    _name = 'report.dangerous_good_delivery_adr.report_delivery_dangerous'
+    _name = 'report.l10n_eu_product_adr_delivery_report.report_delivery_dangerous'
 
     @api.model
     def _get_report_values(self, docids, data=None):

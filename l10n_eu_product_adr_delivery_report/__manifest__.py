@@ -12,7 +12,7 @@
     "application": False,
     "installable": True,
     "depends": [
-        "product_dangerous_good",
+        "l10n_eu_product_adr",
         "stock",
         "delivery",
     ],
